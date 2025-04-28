@@ -1,0 +1,75 @@
+
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 226 26% 14%;
+    --foreground: 0 0% 98%;
+
+    --card: 226 26% 18%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 226 26% 14%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 45 65% 52%;
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 240 5% 63%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 226 26% 20%;
+    --muted-foreground: 240 5% 75%;
+
+    --accent: 226 26% 22%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 70% 52%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 226 26% 24%;
+    --input: 226 26% 24%;
+    --ring: 45 65% 52%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-navy text-foreground font-inter overflow-x-hidden;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-medieval;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hidden {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .ancient-scroll {
+    @apply bg-gradient-to-b from-gold-light/20 via-gold-dark/10 to-gold-light/20 border border-gold/30 shadow-lg;
+  }
+  
+  .glow-on-hover {
+    @apply transition-all duration-300;
+  }
+  
+  .glow-on-hover:hover {
+    @apply shadow-[0_0_15px] shadow-gold/60;
+  }
+}
